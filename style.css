@@ -1,1 +1,61 @@
-
+.publi{
+    margin: 4% auto;
+    width: 80%;
+    background-color: white;
+    height: 300px;
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.30);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.30);
+    -o-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.30);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.35);
+}
+.img-auteur{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    font-size: 1.5rem;
+    float: left;
+}
+.date-publi{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    font-size: 0.75rem;
+}
+.nom-auteur{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 60px;
+}
+.publi-comment{
+    max-width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 1rem;
+}
+.provisoire{
+    width: 50%;
+    height: 30%;
+    background-color: lightgrey;
+    margin: 20px auto;
+}
+.publi hr{
+    width: 80%;
+}
+.com{
+    width: 80%;
+    margin: auto;
+}
+.com img{
+    float: left;
+}
+.com input{
+    position: relative;
+    top: -5px;
+    border: solid lightgrey 1px;
+    border-radius: 5px;
+    height: 25px;
+    margin: auto;
+    margin-left: 2%;
+    width: 85%;
+}
