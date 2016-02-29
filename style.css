@@ -1,47 +1,73 @@
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-
-body {
-    font-family: sans-serif;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    width:100%;
+@font-face {
+    font-family: 'bikobold';
+    src: url('font/biko/biko_bold-webfont.eot');
+    src: url('font/biko/biko_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/biko/biko_bold-webfont.woff2') format('woff2'),
+         url('font/biko/biko_bold-webfont.woff') format('woff'),
+         url('font/biko/biko_bold-webfont.ttf') format('truetype'),
+         url('font/biko/biko_bold-webfont.svg#bikobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-
-.app {
-    position: relative;
+@font-face {
+    font-family: 'bikoregular';
+    src: url('font/biko/biko_regular-webfont.eot');
+    src: url('font/biko/biko_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/biko/biko_regular-webfont.woff2') format('woff2'),
+         url('font/biko/biko_regular-webfont.woff') format('woff'),
+         url('font/biko/biko_regular-webfont.ttf') format('truetype'),
+         url('font/biko/biko_regular-webfont.svg#bikoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lecker';
+    src: url('font/lecker/leckerlione-regular-webfont.eot');
+    src: url('font/lecker/leckerlione-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/lecker/leckerlione-regular-webfont.woff2') format('woff2'),
+         url('font/lecker/leckerlione-regular-webfont.woff') format('woff'),
+         url('font/lecker/leckerlione-regular-webfont.ttf') format('truetype'),
+         url('font/lecker/leckerlione-regular-webfont.svg#leckerlioneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: 'bikoregular', sans-serif;
+    background-color: #fff2df;
+    margin: 0 0;
     width: 100%;
+    height: 100%;
 }
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-
-/* --------------------------------------------------------------- */
-
-
-
 a{
-    cursor: pointer;
+	cursor: pointer;
 }
-header nav{
-    height: 50px;
-    background-color: #ffaa00;
+/* HEADER BASE */
+header{
+	background-color: #ffaa00;
+	color: #ffffff;
+	height: 5vh;
+	margin-bottom: 15px;
 }
+header h1{
+	font-size: 2rem;
+	font-weight: normal;
+	text-align: center;
+	line-height: 5vh;
+	margin: 0;
+}
+
+/* MENU HAMBURGER */
+
+.menu-util{
+    background-color: #ffaa00; /* à changer */
+}
+
 header nav ul{
     color: black;
     background-color: rgba(255,255,255,0.6);
-}
-.menu-util{
-    background-color: #ffaa00;
 }
 header nav ul li{
     list-style: none;
@@ -52,9 +78,4 @@ header nav ul li{
     left: 20px;
     top: 10px;
     font-size: 1.5rem;
-}
-.title{
-    text-align: center;
-    font-size: 1.25rem;
-    line-height: 50px;
 }
