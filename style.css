@@ -1,1 +1,29 @@
-
+/* FA PAGE FILTRES ACTI */
+header .fa{
+	font-size: 1.4rem;
+	position: absolute;
+	top: 12px;
+	right: 50px;
+}
+header .fa-search{
+	margin-right: 15px;
+	color: rgba(255, 255, 255, 0.6);
+}
+/*LISTE ACTIVITES */
+nav ul{
+	padding: 0 10px 0 10px;
+}
+nav ul li{
+	list-style: none;
+}
+nav ul li h2{
+	font-size: 1.4rem;
+	font-weight: normal;
+	margin: 0;
+	color: #37474f;
+}
+nav ul li p{
+	color: #546e7a;
+	font-size: 1.3rem;
+	margin: 5px 0 10px 0;
+}
