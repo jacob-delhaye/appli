@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
 
+        <header>
+            <nav>
+                <a class='hamburger'><i class="fa fa-bars"></i></a>
+                <div class="title">Accueil</div>
+                <div class="menu-util">
+                    <div class="info-util">
+                        <img src="res/icon/android/icon-36-ldpi.png" alt="">
+                        Bonjour
+                        <br>
+                        Bob !
+                    </div>
+                    <div class="mail-util-menu">bob@melanie.ftg<i class="fa fa-arrow"></i></div>
+                </div>
+                <ul>
+                    <li>Actu'</li>
+                    <li>Mon compte</li>
+                    <li>Activités en cours</li>
+                    <li>Toutes les activités</li>
+                    <li>Proposer une activité</li>
+                    <li>Déconnexion</li>
+                </ul>
+            </nav>
+        </header>
+
+        
+        <div class="app">
+            <div class="publi">
+                <img src="res/icon/android/icon-36-ldpi.png" width="50" class="img-auteur" alt="">
+                <div class="date-publi">23-02-2016</div>
+                <div class="nom-auteur">Bob</div>
+                <p class="publi-comment">J'ai réalisé une fleur de lotus en papier toilette !</p>
+                <div class="provisoire"></div>
+                <hr>
+                <div class="com">
+                    <img src="res/icon/android/icon-36-ldpi.png" width="10%" class="img-com" alt="">
+                    <input type="text" placeholder="Ajouter un commentaire...">
+                </div>
+            </div>
+        </div>
+        <div class="app">
+            <div class="publi">
+                <img src="res/icon/android/icon-36-ldpi.png" width="50" class="img-auteur" alt="">
+                <div class="date-publi">Everyday</div>
+                <div class="nom-auteur">Jacob</div>
+                <p class="publi-comment">J'emmerde Mel et je lui dit de fermer sa gueule !</p>
+                <div class="provisoire"></div>
+                <hr>
+                <div class="com">
+                    <img src="res/icon/android/icon-36-ldpi.png" width="10%" alt="">
+                    <input type="text" placeholder="Ajouter un commentaire...">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
