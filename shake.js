@@ -13,7 +13,7 @@ Activate();
 }
 }
 function up(){
-  $('.activite').animate({marginTop:-window.innerHeight},500);
+  $('.activite').animate({marginTop:-window.innerHeight/1.2},500);
 }
 function Activate(){
   $('.box').addClass('shaker');
