@@ -1,26 +1,17 @@
-
-nav{
-  background-color: #ffaa00;
-  line-height: 50px;
-  height: 50px;
-}
-nav h1{
-  height: 100%;
-}
-.contenu h1{
-  color: #263238;
-  font-family: 'lecker';
-
-}
+/* cette div permet de centrer le contenu dans la page pas indispensable */
 .contenu{
   width: 90%;
-  height: 100vh; /* hauteur de l'écran - hauteur de la nav */
+  height: 100vh; /* A diminuer selon taille header */
   margin: auto;
   text-align: center;
   padding-top: 5vh;
   box-sizing: border-box;
 }
-
+.contenu h1{
+  color: #263238;
+  font-family: 'lecker';
+}
+/* Boite rouge*/
 .box{
   width: 300px;
   height: 300px;
@@ -28,59 +19,51 @@ nav h1{
   text-align: center;
   background-color: #ff5151;
 }
+/* logo blanc dans la box*/
 .box img{
   width: 80%;
   margin-top: 40%;
 }
+/* Class qui fait bouger la box, on ajoute cette class à .box lorsqu'on clique dessus */
 .shaker{
   animation: shake 0.5s;
 }
+/* Animation box secouée */
 @-webkit-keyframes shake {
-
   0% {
-
     -ms-transform: rotate(0deg); /* IE 9 */
     -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
     transform: rotate(0deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
-
   }
 
   20% {
-
     -ms-transform: rotate(20deg); /* IE 9 */
     -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
     transform: rotate(20deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: linear;
-
   }
 
 
   30% {
-
     -ms-transform: rotate(-20deg); /* IE 9 */
     -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
     transform: rotate(-20deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: linear;
-
   }
 
-
   50% {
-
     -ms-transform: rotate(20deg); /* IE 9 */
     -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
     transform: rotate(20deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: linear;
-
   }
 
   70% {
-
     -ms-transform: rotate(-20deg); /* IE 9 */
     -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
     transform: rotate(-20deg);
@@ -88,7 +71,6 @@ nav h1{
     animation-timing-function: linear;
   }
   80% {
-
     -ms-transform: rotate(20deg); /* IE 9 */
     -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
     transform: rotate(20deg);
@@ -96,7 +78,6 @@ nav h1{
     animation-timing-function: linear;
   }
   100% {
-
     -ms-transform: rotate(0deg); /* IE 9 */
     -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
     transform: rotate(0deg);
@@ -105,102 +86,7 @@ nav h1{
   }
 }
 
-.reponse{
-  width: 60%;
-  height: 100px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 2rem;
-  line-height: 100px;
-  color: white;
-  margin: 50px 0;
-  display: none;
-}
-
-#interieur{
-  background-color:#ffaa00;
-  display: inline-block;
-
-}
-#exterieur{
-  background-color:#51bcaf;
-  display: inline-block;
-
-}
-#seul{
-  background-color:#3fc3ff;
-}
-#accompagne{
-  background-color:#df3ffa;
-}
-#amis,#heureux{
-  background-color:#63dc16;
-  margin: 5vh 0;
-
-}
-#famille,#triste{
-  background-color:#ffd500;
-  margin: 5vh 0;
-
-
-}
-#couple,#enerve{
-  background-color:#ff5151;
-  margin: 5vh 0;
-
-}
-/* Portrait layout (default) */
-
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-
-}
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
-}
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
-
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
-}
+/* Détails de l'activité, apparait après avoir shaker le tel*/
 .activite{
   height: 100vh;
   width: 100%;
@@ -208,32 +94,37 @@ h1 {
   z-index: 1;
   background-color: #fff2df;
 }
+/* Contient le tick , la croix et le nom de l acti pour qu'ils soient fixes*/
 .head{
   position: fixed;
   background-color: #fff2df;
   width: 100%;
   height: 100px;
 }
+/*Flemme de bien le selectionner alors j'ai mis une classe pour le nom de l'acti */
 .titre{
   font-size: 2rem;
   padding: 0 2%;
   font-family: 'lecker';
   color: black;
 }
+/*du nom de l acti jusqu'a la fleche comprise en gros apercu != détails*/
 .apercu{
   height:90vh;
 }
-
+/* Cible à la fois le tick et la croix*/
 .choix{
   position: relative;
   text-decoration: none;
   color: grey;
   font-size: 1.8rem;
 }
+/* le tick */
 .accepter{
   left:-35%;
   font-size: 2rem;
 }
+/*la croix*/
 .refuser{
   left:35%;
 }
@@ -242,19 +133,23 @@ p{
   font-size: 1.5rem;
   padding: 0 10%;
 }
+/*Texte qui correspond aux challenge*/
 .court{
   display: table-cell;
   height: 40vh;
   vertical-align: middle;
   width: 10%;
 }
+/* flecge + texte 'en savoir plus' */
 .plus{
   margin-top: 2vh;
 }
+/*texte 'en savoir plus'*/
 .plus p{
   color: grey;
   margin: 0;
 }
+/* Enplacement image ou gg map*/
 .image{
   width: 80%;
   height: 50vh;
@@ -262,9 +157,7 @@ p{
   background-color: grey;
   margin-bottom: 10vh;
 }
-p:last-child{
-  margin-bottom:5vh;
-}
+/* la pop up de confirmation*/
 .confirme{
   position: fixed;
   top:35vh;
