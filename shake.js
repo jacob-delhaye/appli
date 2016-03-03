@@ -8,7 +8,7 @@ var x = event.accelerationIncludingGravity.x;
 var y = event.accelerationIncludingGravity.y;
 var z = event.accelerationIncludingGravity.z;
 // document.getElementById("essai").innerHTML = "<ul><li>X : " + x + "</li><li>Y : " + y + "</li><li>Z : " + z + "</li></ul>";
-if(x>10){
+if(x>10||y>15||z>15){
 Activate();
 }
 }
