@@ -3,34 +3,34 @@
 }
 @font-face {
     font-family: 'bikobold';
-    src: url('font/biko/biko_bold-webfont.eot');
-    src: url('font/biko/biko_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/biko/biko_bold-webfont.woff2') format('woff2'),
-         url('font/biko/biko_bold-webfont.woff') format('woff'),
-         url('font/biko/biko_bold-webfont.ttf') format('truetype'),
-         url('font/biko/biko_bold-webfont.svg#bikobold') format('svg');
+    src: url('../font/biko/biko_bold-webfont.eot');
+    src: url('../font/biko/biko_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/biko/biko_bold-webfont.woff2') format('woff2'),
+         url('../font/biko/biko_bold-webfont.woff') format('woff'),
+         url('../font/biko/biko_bold-webfont.ttf') format('truetype'),
+         url('../font/biko/biko_bold-webfont.svg#bikobold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'bikoregular';
-    src: url('font/biko/biko_regular-webfont.eot');
-    src: url('font/biko/biko_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/biko/biko_regular-webfont.woff2') format('woff2'),
-         url('font/biko/biko_regular-webfont.woff') format('woff'),
-         url('font/biko/biko_regular-webfont.ttf') format('truetype'),
-         url('font/biko/biko_regular-webfont.svg#bikoregular') format('svg');
+    src: url('../font/biko/biko_regular-webfont.eot');
+    src: url('../font/biko/biko_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/biko/biko_regular-webfont.woff2') format('woff2'),
+         url('../font/biko/biko_regular-webfont.woff') format('woff'),
+         url('../font/biko/biko_regular-webfont.ttf') format('truetype'),
+         url('../font/biko/biko_regular-webfont.svg#bikoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'lecker';
-    src: url('font/lecker/leckerlione-regular-webfont.eot');
-    src: url('font/lecker/leckerlione-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/lecker/leckerlione-regular-webfont.woff2') format('woff2'),
-         url('font/lecker/leckerlione-regular-webfont.woff') format('woff'),
-         url('font/lecker/leckerlione-regular-webfont.ttf') format('truetype'),
-         url('font/lecker/leckerlione-regular-webfont.svg#leckerlioneregular') format('svg');
+    src: url('../font/lecker/leckerlione-regular-webfont.eot');
+    src: url('../font/lecker/leckerlione-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lecker/leckerlione-regular-webfont.woff2') format('woff2'),
+         url('../font/lecker/leckerlione-regular-webfont.woff') format('woff'),
+         url('../font/lecker/leckerlione-regular-webfont.ttf') format('truetype'),
+         url('../font/lecker/leckerlione-regular-webfont.svg#leckerlioneregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,6 +40,7 @@ body{
     margin: 0 0;
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 a{
 	cursor: pointer;
@@ -48,14 +49,14 @@ a{
 header{
 	background-color: #ffaa00;
 	color: #ffffff;
-	height: 5vh;
+	height: 8vh;
 	margin-bottom: 15px;
 }
 header h1{
 	font-size: 2rem;
 	font-weight: normal;
 	text-align: center;
-	line-height: 5vh;
+	line-height: 8vh;
 	margin: 0;
 }
 
