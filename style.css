@@ -1,1 +1,100 @@
 
+
+
+
+.reponse{
+  width: 60%;
+  height: 100px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 100px;
+  color: white;
+  margin: 50px 0;
+
+  display: none;
+}
+#interieur{
+  background-color:#ffaa00;
+  display: inline-block;
+
+}
+#exterieur{
+  background-color:#51bcaf;
+  display: inline-block;
+
+}
+#seul{
+  background-color:#3fc3ff;
+}
+#accompagne{
+  background-color:#df3ffa;
+}
+#amis,#heureux{
+  background-color:#63dc16;
+  margin: 5vh 0;
+
+}
+#famille,#triste{
+  background-color:#ffd500;
+  margin: 5vh 0;
+
+
+}
+#couple,#enerve{
+  background-color:#ff5151;
+  margin: 5vh 0;
+
+}
+/* Portrait layout (default) */
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
