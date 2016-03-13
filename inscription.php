@@ -15,6 +15,6 @@
     $insert="INSERT INTO utilisateur VALUES ('', '$login', '$mdpInscri', '', '', '$email', '')";
     mysqli_query($connexion, $insert) or die ("Connexion nulle");
     
-    header('location:../acti');
-    
+    header('location:../filactu');
+
 ?>
