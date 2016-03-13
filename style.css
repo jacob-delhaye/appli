@@ -1,28 +1,33 @@
-/* cette div permet de centrer le contenu dans la page pas indispensable */
-.contenu{
+/* H1 */
+.shakebox h1, .head h1{
+  color: #37474f;;
+  font-family: 'lecker';
+}
+/* cette class permet de centrer le contenu dans la page pas indispensable */
+.shakebox{
   width: 90%;
   height: 100vh; /* A diminuer selon taille header */
   margin: auto;
-  text-align: center;
   padding-top: 5vh;
   box-sizing: border-box;
 }
-.contenu h1{
-  color: #263238;
-  font-family: 'lecker';
-}
-/* Boite rouge*/
+/* Boite rouge */
 .box{
-  width: 300px;
-  height: 300px;
+  cursor: pointer;
+  max-width: 300px;
+  max-height: 300px;
   margin: 15vh auto;
-  text-align: center;
   background-color: #ff5151;
+  /*OMBRE PORTEE*/
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
 }
-/* logo blanc dans la box*/
+/* logo blanc dans la box rouge */
 .box img{
-  width: 80%;
-  margin-top: 40%;
+  max-width: 80%;
+  margin: 40% 0;
 }
 /* Class qui fait bouger la box, on ajoute cette class à .box lorsqu'on clique dessus */
 .shaker{
@@ -88,68 +93,70 @@
 
 /* Détails de l'activité, apparait après avoir shaker le tel*/
 .activite{
-  height: 100vh;
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   z-index: 1;
   background-color: #fff2df;
+  display: none;
+  padding-top: 2vh;
 }
-/* Contient le tick , la croix et le nom de l acti pour qu'ils soient fixes*/
-.head{
-  position: fixed;
-  background-color: #fff2df;
-  width: 100%;
-  height: 100px;
-}
-/*Flemme de bien le selectionner alors j'ai mis une classe pour le nom de l'acti */
-.titre{
-  font-size: 2rem;
-  padding: 0 2%;
-  font-family: 'lecker';
-  color: black;
-}
-/*du nom de l acti jusqu'a la fleche comprise en gros apercu != détails*/
+/* des icones tick et croix jusqu'a "en savoir plus" = aperçu */
 .apercu{
   height:90vh;
 }
-/* Cible à la fois le tick et la croix*/
-.choix{
-  position: relative;
-  text-decoration: none;
+.head{
+  height: 10vh;
+}
+/* le tick et les croix*/
+.choix i.fa, .confirme a i.fa-times{
   color: grey;
   font-size: 1.8rem;
+  vertical-align: middle;
 }
 /* le tick */
-.accepter{
-  left:-35%;
-  font-size: 2rem;
+.choix i.fa-check{
+  float: left;
+  text-align: left;
+  padding-left: 2%;
 }
-/*la croix*/
-.refuser{
-  left:35%;
+/*les croix */
+.refuser, .confirme a i.fa-times{
+  float: right;
+  text-align: right;
+  padding-right: 2%;
 }
 p{
-  color: #263238;
+  color: #37474f;
   font-size: 1.5rem;
   padding: 0 10%;
 }
-/*Texte qui correspond aux challenge*/
-.court{
-  display: table-cell;
-  height: 40vh;
-  vertical-align: middle;
-  width: 10%;
+/*challenge*/
+.challenge{
+  height: 30vh;
 }
-/* flecge + texte 'en savoir plus' */
+/* bloc "en savoir plus" */
 .plus{
   margin-top: 2vh;
 }
-/*texte 'en savoir plus'*/
-.plus p{
-  color: grey;
-  margin: 0;
+/* flèche + texte 'en savoir plus' */
+.plus a{
+  color: #8fa3ad;
+  text-decoration: none;
 }
-/* Enplacement image ou gg map*/
+/*pour centrer la flèche */
+.plus a i.fa-angle-down{ 
+  display: table; /*type "block" par défaut, test tous les types avec "inspecter l'élément" -> seul "table" permet le "margin auto" */
+  box-sizing: border-box; /*évite le bug du "display table" pour Safari 5.1.17 d'après CanIUse */
+  margin: -5vh auto;
+  font-size: 10rem;
+}
+/*texte 'en savoir plus'*/
+.plus span{
+  font-size: 2rem;
+  display: block; /* sinon le texte ne se centre pas */
+  padding: 0 10%;
+}
+/* Enplacement image ou gg map */
 .image{
   width: 80%;
   height: 50vh;
@@ -157,28 +164,33 @@ p{
   background-color: grey;
   margin-bottom: 10vh;
 }
-/* la pop up de confirmation*/
-.confirme{
-  position: fixed;
-  top:35vh;
-  left: 12%;
+/* la pop up de confirmation */
+.head h1{
+  font-size: 2.5rem;
+  display: inline; /*enlever le saut de ligne;*/
+}
+.confirme {
+  background-color: #fff2df;
+  position: absolute;
   z-index: 3;
-  width: 76%;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  -o-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.8);
   box-sizing: border-box;
-  padding: 0 10%;
-  background-color: #ffaa00;
+  border: thin solid #ccc;
   display: none;
-  -moz-box-shadow: 0px 0px 5px 3px #c0c0c0;
-  -webkit-box-shadow: 0px 0px 5px 3px #c0c0c0;
-  -o-box-shadow: 0px 0px 5px 3px #c0c0c0;
-  box-shadow: 0px 0px 5px 3px #c0c0c0;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=NaN, Strength=5);
+  padding-top: 2vh;
+  width: 75%;
+  left: calc(50% - 37.5%);
+  top: calc(50% - 15%);
 }
-.confirme h1{
-  margin-top: 4vh;
-  font-size: 1.8rem;
-}
-.confirme p{
-  padding: 0;
-  color: white;
+.overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  max-height: 100%;
+  display: none;
 }
