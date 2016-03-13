@@ -26,116 +26,133 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="../css/index.css" />
-        <link rel="stylesheet" type="text/css" href="../css/toutenUn.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="../js/jquery.mobile.custom.js"></script>
-        <title>Tutoriel</title>
+        <title>Activités</title>
     </head>
     <body>
-        <div class="app">
-          <nav>
-            <h1>It's shakin' time !</h1>
-          </nav>
-              <div class="contenu">
-                <h1>Agite ton téléphone ou touche
-la boite pour découvrir ton
-activité !</h1>
+      <div class="overlay"></div><!-- fond sombre à l'ouverture de la popup -->
+         <header>
+             <h1>Itʼs shakinʼtime !</h1>
+         </header>
+           
+         <div class="shakebox">
+             <h1>Agite ton téléphone ou touche la boite pour découvrir ton activité !</h1>
 
+             <div class="box">
+                 <img src="../img/logo_blanc.png" alt="" />
+             </div>
 
-<div class="shakinTime">
-      <div class="box">
-          <img src="../img/logo_blanc.png" alt="" />
-      </div>
-              </div>
-              <audio id='son' src="shake.mp3"></audio>
-</div>
+             <audio id='son' src="shake.mp3"></audio>
+         </div>
+
+<!-- POPUP QUAND ON CLIQUE SUR TICK OU CROIX DE ACTIVITE -->
+         <div class="confirme">
+            <div class="head">
+              <h1>Nom de lʼactivité</h1>
+              <a class="ferme-popup"><i class="fa fa-times"></i></a>
+            </div>
+             <p>
+               Tu as choisi cette activité !<br><br>
+               Elle a été placée dans ta rubrique
+               "Activités en cours" !<br><br>
+               Partage-la avec tes abonnés
+               lorsque tu lʼauras terminée !<br><br>
+               (Seulement si tu t'es connecté !)
+             </p>
+         </div>
+
 <!-- ACTIVITE  -->
-<div class="activite">
+    <div class="activite">
 
-  <div class="apercu">
-    <div class="head">
-    <a href="#" class='accepter choix'>&#10003	</a>
-    <a href="#" class='refuser choix'>X</a>
-    <h1 class="titre">Nom de l'activité</h1>
-  </div>
+      <div class="apercu">
+        <div class="head">
+        <a class='ouvre-popup accepter choix'><i class="fa fa-check"></i></a>
+        <h1>Nom de lʼactivité</h1>
+        <a class='refuser choix'><i class="fa fa-times"></i></a>
+      </div>
 
-    <p class='court'>
+        <p class="challenge">
+          Description lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="plus">
+          <a href="#details"><i class="fa fa-angle-down"></i>
+          <br>
+          <span>
+            En savoir plus
+          </span>
+          </a>
+        </div>
+      </div>
 
-      Description lorem ipsum dolor sit amet,
-consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <div class="plus">
-      <a href="#details"><img src="../img/fleche.png" alt="" />
-      <p>
-        En savoir plus
-      </p>
-      </a>
+      <div id="details">
+          <p class="description">
+            Description lorem ipsum dolor sit amet,  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="image"> <!--gg map ou image-->
+
+          </div>
+      </div>
     </div>
-  </div>
 
-  <div id="details">
+<!-- JAVASCRIPT -->
 
-    <p class='description'>
-      Description lorem ipsum dolor sit amet,  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <div class="image">
-
-    </div>
-  </div>
-  <div class="confirme">
-    <h1>Nom de l'activité</h1>
-    <p>
-      Tu as choisi cette activité !
-      Elle a été placée dans ta rubrique
-      "Activité en cours" !
-      Partage-la avec tes abonnés
-      lorsque tu l'auras terminée !
-    </p>
-
-  </div>
-</div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="../js/index.js"></script>
         <script type="text/javascript" src="../js/shake.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            //app.initialize(); a remettre plus tard pour tester sur phone
             $.ajax({
               type : 'POST',
               url : 'http://shakinbox.com/appli/www/acti/actiAlea.php?var1='+sessionStorage["choix1"]+'&var2='+sessionStorage["choix2"]+'&var3='+sessionStorage["choix3"],
               dataType : 'json',
               data:sessionStorage["choix2"],
               success : function(data){
-                 $('.court').html(data['texte_acti']);
-                 $('.titre').html(data['nom_acti']);
-                 $('.description').html(data['description_acti']);
-                 console.log(data);
+                $('.nomActi').html(data['nom_acti']);
+                $('.challenge').html(data['texte_acti']);
+                $('.description').html(data['description_acti']);
+                console.log(data);
                 }
-              });
-              $('.box').on('click',Activate);
+            });
+            $('.box').on('click',Activate); // Quand on clique sur la boite ou secoue le tel
 
-          // Faire monter description acti
+          // Quand on clique sur "en savoir plus" -> texte details monte
             $('.plus').on('click',function(){
-              $(this).fadeOut();
               $('#details').animate({marginTop:-100},300);
             });
-            //Pop up quand acceptation
-            $('.accepter').on('click',function(){
+
+          //Pop up quand acceptation
+            $('.ouvre-popup').click(function () {
               $('.confirme').fadeIn();
-              setInterval(function(){
-                $('.confirme').fadeOut();
-              },4000);
+              $('.overlay').fadeIn();
+              $('.activite').css('display', 'none'); //à supprimer si on refresh, trouver un autre moyen
             });
-          //revenir à la box/ avoir une autre actiAlea
+
+            $('.ferme-popup, .overlay, .refuser').click(function () { //overlay disparait quand on clique dessus ou sur les croix
+              $('.confirme').fadeOut();
+              $('.overlay').fadeOut();
+              $('.activite').css('display', 'none'); //à supprimer si on refresh, trouver un autre moyen
+            });
+
+          //revenir à la box/avoir une autre acti aléatoire après avoir cliquer sur l'un des icones
+
+            $('.accepter').on('click',function(){
+              $('.activite').animate({marginTop:window.innerHeight},1000);
+              $('.fond').slideUp(2000);
+              //$('.box').removeClass('shaker'); enlever la class pour que ça recheck après
+            });
 
             $('.refuser').on('click',function(){
               $('.activite').animate({marginTop:window.innerHeight},1000);
               $('.fond').slideUp(2000);
-              setInterval(function(){window.location="toutenUn.html"},500);
-
+              //$('.box').removeClass('shaker'); enlever la class pour que ça recheck après
             });
 
-
         </script>
+
     </body>
 </html>
