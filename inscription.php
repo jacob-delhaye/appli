@@ -7,7 +7,7 @@
         extract($_POST);
         $password = sha1($_POST['password']);
       
-        // on recupére le password de la table qui correspond au login du visiteur
+        // on recupére l'id de la table qui correspond au login du visiteur
         $sql = "select id_util, mail_util from utilisateur where login_util='".$login."'";
         $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
