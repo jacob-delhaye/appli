@@ -7,7 +7,7 @@ session_destroy();
 
 // Suppression des cookies de connexion automatique
 setcookie('login', '');
-setcookie('pass_hache', '');
+setcookie('password', '');
 
 //redirige vers la page activité aléatoire
 header('location:../acti');
