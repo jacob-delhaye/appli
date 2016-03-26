@@ -1,14 +1,14 @@
 <?php
     // on se connecte à MySQL 
     $db = mysql_connect('shakinboiz3.mysql.db', 'shakinboiz3', '3Bananes'); 
-    mysql_select_db('shakinboiz3',$db); 
-
+    mysql_select_db('shakinboiz3',$db);
+    
     if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['password']) && !empty($_POST['email'])) {
         extract($_POST);
         $password = sha1($_POST['password']);
       
         // on recupére l'id de la table qui correspond au login du visiteur
-        $sql = "select id_util, mail_util from utilisateur where login_util='".$login."'";
+        $sql = "SELECT id_util, mail_util FROM utilisateur WHERE login_util='".$login."'";
         $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
         $data = mysql_fetch_assoc($req);
@@ -31,5 +31,4 @@
     else {
       $champs = '<p><b>(Remplissez tous les champs pour vous connectez !)</b></p>';
     }
-
 ?>
