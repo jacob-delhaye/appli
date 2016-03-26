@@ -3,7 +3,8 @@ $lieu=$_GET['var1'];
 $accompagnemment=$_GET['var2'];
 $comment=$_GET['var3'];
 $db = new PDO('mysql:host=shakinboiz3.mysql.db;dbname=shakinboiz3;charset=utf8', 'shakinboiz3', '3Bananes');
-$id_session=1;
+session_start();
+$id_session = $_SESSION['id_session'];
 
 #######  L'utilisateur est connecté  ########
 if(isset($id_session)){
