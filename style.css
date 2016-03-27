@@ -23,7 +23,76 @@
   width: 100%;
   background-color: yellow;
 }
+/********* PAGE MODIFIER MON COMPTE & PARAMETRES DE LAPPLI *************/
 
+form{
+  text-align: center;
+  padding-top: 5vh;
+}
+form input{
+  margin: 0 auto;
+}
+
+/* placeholder */
+::-webkit-input-placeholder {
+  color : rgba(81,188,175,0.8);
+  font-size: 1.1rem;
+  line-height: 33px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color : rgba(81,188,175,0.8);
+  line-height: 33px;
+  font-size: 1.1rem;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  color : rgba(81,188,175,0.8);
+  line-height: 33px;
+  font-size: 1.1rem;
+}
+:-ms-input-placeholder {  
+  color : rgba(81,188,175,0.8);
+  line-height: 33px;
+  font-size: 1.1rem;
+}
+
+label{
+  color: #37474f;
+}
+label, input[type="submit"]{
+  font-family: 'lecker', sans-serif;
+  font-size: 1.5rem;
+}
+/* input */
+input:not(.top){
+  margin-top: 20px;
+}
+input[type="email"], input[type="password"]{
+  height: 33px;
+  line-height: 33px;
+  width: 260px;
+  border: 2px solid #51BCAF;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+input[type="submit"]{
+  background-color: #ffaa00;
+  color: #ffffff;
+  padding: 1px 15px 3px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 7px;
+
+  /*OMBRE PORTEE*/
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+input[type="checkbox"]{
+  width: 50px;
+  height: 50px;
+}
 
 /********* ABONNES ABONNEMENTS *************/
 .add{
