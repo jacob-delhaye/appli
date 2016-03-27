@@ -32,7 +32,7 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="../js/jquery.mobile.custom.js"></script>
-        <title>Connexion</title>
+        <title>Modifier mon compte</title>
 	</head>
 
 	<body>
@@ -66,15 +66,16 @@
     </header>
 		<form action="http://shakinbox.com/appli/anousone/php/connexion.php" method="POST">
             <label>Modifier mon mot de passe</label>
+            <br>
 			<input type="password" value="" name="old_pwd" maxlength="12" placeholder="ancien mot de passe" required>
 			<br>
-			<input type="password" value="" name="new_pwd" maxlength="12" placeholder="nouveau mot de passe" required>
+			<input class="top" type="password" value="" name="new_pwd" maxlength="12" placeholder="nouveau mot de passe" required>
             <br>
             <label>Modifier mon e-mail</label>
             <br>
-            <input type="email" value="" name="new_email" maxlength="100" placeholder="nouveau e-mail" required>
+            <input type="email" value="" name="new_email" maxlength="100" placeholder="nouvel e-mail" required>
             <br>
-            <input type="submit" value="enregistrer" name="Enregistrer">
+            <input class="top" type="submit" value="enregistrer" name="Enregistrer">
 
 		</form>
 
