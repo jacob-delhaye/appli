@@ -66,11 +66,16 @@
     </header>
 		<form action="http://shakinbox.com/appli/anousone/php/connexion.php" method="POST">
             <label>Modifier mon mot de passe</label>
-			<input type="password" value="" name="old_pwd" placeholder="ancien mot de passe" required>
+			<input type="password" value="" name="old_pwd" maxlength="12" placeholder="ancien mot de passe" required>
 			<br>
-			<input type="password" value="" name="new_pwd" placeholder="nouveau mot de passe" required>
-			<br>
-			<input type="password" value="" name="confirm_pwd" placeholder="retaper le mot de passe" required>
+			<input type="password" value="" name="new_pwd" maxlength="12" placeholder="nouveau mot de passe" required>
+            <br>
+            <label>Modifier mon e-mail</label>
+            <br>
+            <input type="email" value="" name="new_email" maxlength="100" placeholder="nouveau e-mail" required>
+            <br>
+            <input type="submit" value="enregistrer" name="Enregistrer">
+
 		</form>
 
 		<script type="text/javascript" src="cordova.js"></script>
