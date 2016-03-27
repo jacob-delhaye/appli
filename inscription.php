@@ -22,7 +22,7 @@
         }
         
         else {
-          mysql_query("INSERT INTO utilisateur VALUES('','$login','$password', '', '', '$email', '')");
+          mysql_query("INSERT INTO `utilisateur` (`login_util`, `mdp_util`, `mail_util`) VALUES ('$login','$password','$email')");
           session_start();
           $_SESSION['login'] = $login;
           header('location:../filactu');
