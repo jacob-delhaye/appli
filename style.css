@@ -1,1 +1,82 @@
+/********* PAGE MON COMPTE *************/
+/* LES LIENS */
+.abonne a, .contenu a{
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 10%;
+}
+/* BLOC NOM UTILISATEUR */
+.nom-user{
+  background-color: red;
+
+}
+.nom-user img{
+  max-width: 5%;
+}
+.nom-user h1{
+  font-family: 'lecker', sans-serif;
+  font-size: 1.5rem;
+}
+
+/* BLOC ABONNE */
+.abonne{
+  width: 100%;
+  background-color: yellow;
+}
+
+
+/********* ABONNES ABONNEMENTS *************/
+.add{
+  border-radius: 50%;
+  padding: 5% 7%;
+  position: fixed;
+  right: 5%;
+  bottom: 2vh;
+  background-color:#ffaa00;
+}
+.add:hover{
+  padding: 4% 5%;
+}
+.contenu  ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 15% 0;
+  }
+.contenu  ul li:hover{
+  font-size: 1.3rem;
+}
+  .contenu ul{
+    padding-left: 20%;
+    padding-top: 1vh;
+  }
+  .contenu ul:first-of-type {
+      padding-top: 0.5rem;
+  }
+  .contenu ul li:first-child{
+    margin-top: 0;
+  }
+  .contenu{
+    width: 90%;
+    padding-left: 5%;
+    margin: auto;
+  }
+
+  .lettre{
+    float: left;
+    font-size: 2rem;
+    color:#37474f;
+  }
+  .profil{
+    background: #37474f;
+    margin-top: -5%;
+    border-radius: 50%;
+    padding: 10%;
+    width: 0;
+    float: right;
+    display: none;
+  }
+  hr{
+    margin-bottom: 5vh;
+  }
 
