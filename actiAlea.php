@@ -3,9 +3,9 @@ $lieu=$_GET['var1'];
 $accompagnemment=$_GET['var2'];
 $comment=$_GET['var3'];
 $db = new PDO('mysql:host=shakinboiz3.mysql.db;dbname=shakinboiz3;charset=utf8', 'shakinboiz3', '3Bananes');
-// session_start();
-// $id_session=$_SESSION['id_session'];
-$id_session=6;
+session_start();
+$id_session=$_SESSION['id_session'];
+
 $stat=$db->query("SELECT * FROM statistique WHERE stat_util=$id_session");
 $stat_id=$stat->rowCount();
 #######  L'utilisateur est connecté et table statistiques remplie  ########
